@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/IdreesInc/Helios-Relay/issues"
   },
-  "homepage": "https://github.com/IdreesInc/Helios-Relay#readme"
+  "homepage": "https://github.com/IdreesInc/Helios-Relay#readme",
+  "dependencies": {
+    "socket.io": "^4.2.0"
+  }
 }
