@@ -2,9 +2,9 @@
   "name": "helios-relay",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "application.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node application.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
