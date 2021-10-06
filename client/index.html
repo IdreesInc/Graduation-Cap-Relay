@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LED Matrix</title>
+    <title>Graduation Cap Controller</title>
     <link rel="stylesheet" href="./stylesheet.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
     <body>
-        <div id="matrix"></div>
-        <div id="cons">hiya</div>
-        <!-- <script src="https://cdn.socket.io/4.1.2/socket.io.min.js" integrity="sha384-toS6mmwu70G0fw54EGlWWeA4z3dyJ+dlXBtSURSKN4vyRFOcxd3Bzjj/AoOwY+Rg" crossorigin="anonymous"></script> -->
+        <span>Brightness: </span>
+        <input type="range" id="brightness" name="brightness" min="0" max="100">
         <!-- Only for debugging -->
         <script src="https://cdn.socket.io/4.1.2/socket.io.js" crossorigin="anonymous"></script>
         <script src="./client-application.js""></script>

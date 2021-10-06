@@ -10,20 +10,11 @@ console.log("Starting Helios Relay!");
 // Initialize Socket.IO server
 io.on("connection", function(socket) {
   console.log(socket.id + " has connected");
-  socket.on("draw", (data) => {
-      for (let coordinates of data) {
-        pixelUpdates.push(coordinates);
-      }
+  socket.on("brightness", (data) => {
+    console.log("Relaying brightness -> " + data);
+    io.emit("brightness", data);
   }); 
 });
-
-setInterval(() => {
-  if (pixelUpdates.length > 0) {
-    console.log("Broadcasting " + pixelUpdates.length + " pixel updates!");
-    io.emit("draw", pixelUpdates);
-    pixelUpdates = [];
-  }
-}, 100)
 
 // Initialize client webserver
 app.use('/', express.static(__dirname + '/client'));
