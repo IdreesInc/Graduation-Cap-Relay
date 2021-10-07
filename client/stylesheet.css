@@ -1,0 +1,15 @@
+.disconnected {
+    color: red;
+}
+
+.disconnected::before {
+    content: "Graduation Cap is not connected!";
+}
+
+.connected {
+    color: rgb(80, 255, 80);
+}
+
+.connected::before {
+    content: "Graduation Cap is connected!";
+}
