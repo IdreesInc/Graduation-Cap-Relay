@@ -28,6 +28,11 @@ io.on("connection", function(socket) {
     io.emit("brightness", data);
   });
 
+  socket.on("display", (data) => {
+    console.log("Relaying display override -> " + data);
+    io.emit("display", data);
+  });
+
   socket.on("disconnect", () => {
     if (socket.id === graduationCapId) {
       console.log("Graduation cap has disconnected!");

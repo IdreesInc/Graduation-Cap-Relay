@@ -8,8 +8,16 @@
 </head>
     <body>
         <div id="connection" class="disconnected"></div>
-        <span>Brightness: </span>
-        <input type="range" id="brightness" name="brightness" min="0" max="100" value="100">
+        <div class="control">
+            <span>Brightness: </span>
+            <input type="range" id="brightness" name="brightness" min="0" max="100" value="100">
+        </div>
+        <div class="control">
+            <span>Override Image: </span>
+            <select name="image" id="image-select">
+                <option value="0">unc.png</option>
+            </select>
+        </div>
         <!-- Only for debugging -->
         <script src="https://cdn.socket.io/4.1.2/socket.io.js" crossorigin="anonymous"></script>
         <script src="./client-application.js""></script>
