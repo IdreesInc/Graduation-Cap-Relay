@@ -4,6 +4,8 @@ const submissionsCdnLink = "https://cdn.jsdelivr.net/gh/IdreesInc/Graduation-Cap
 let connectionWarning = document.getElementById("connection");
 let brightnessSlider = document.getElementById("brightness");
 let imageSelect = document.getElementById("image-select");
+let overrideButton = document.getElementById("override");
+let relinquishButton = document.getElementById("relinquish");
 let graduationCapConnected = false;
 let submissions = [];
 
@@ -35,8 +37,12 @@ function init() {
         socket.emit("brightness", brightnessSlider.value);
     });
 
-    imageSelect.addEventListener("change", () => {
+    overrideButton.addEventListener("click", () => {
         overrideImage(imageSelect.value);
+    });
+
+    relinquishButton.addEventListener("click", () => {
+        socket.emit("relinquish", "Get on with it");
     });
 }
 

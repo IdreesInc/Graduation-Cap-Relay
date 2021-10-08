@@ -33,6 +33,11 @@ io.on("connection", function(socket) {
     io.emit("display", data);
   });
 
+  socket.on("relinquish", (data) => {
+    console.log("Relaying relinquish control -> " + data);
+    io.emit("relinquish", data);
+  });
+
   socket.on("disconnect", () => {
     if (socket.id === graduationCapId) {
       console.log("Graduation cap has disconnected!");
@@ -49,5 +54,5 @@ io.on("connection", function(socket) {
 app.use('/', express.static(__dirname + '/client'));
 
 httpServer.listen(5000, function() {
-	console.log("Listening on *:" + 5000);
+	console.log("Listening on *:" + 25569);
 });
