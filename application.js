@@ -53,6 +53,6 @@ io.on("connection", function(socket) {
 // Initialize client webserver
 app.use('/', express.static(__dirname + '/client'));
 
-httpServer.listen(5000, function() {
+httpServer.listen(25569, function() {
 	console.log("Listening on *:" + 25569);
 });
